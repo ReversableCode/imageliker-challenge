@@ -18,7 +18,7 @@ const getKey = (pageIndex: number, previousPageData: any[]) => {
   if (previousPageData && !previousPageData.length) return null; // reached the end
 
   return `https://api.unsplash.com/photos?client_id=${
-    process.env.UNSPLASH_API_KEY
+    process.env.NEXT_PUBLIC_UNSPLASH_API_KEY
   }&per_page=${PAGE_SIZE}&page=${pageIndex + 1}`;
 };
 
